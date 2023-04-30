@@ -1,0 +1,14 @@
+version: 2
+sources:
+  - name: snow
+    database: sdv
+    schema: sdv_schema
+    tables:
+      - name: customer
+      - name: lineitem
+      - name: nation
+      - name: orders
+      - name: part
+      - name: partsupp
+      - name: region
+      - name: supplier
