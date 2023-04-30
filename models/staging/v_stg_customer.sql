@@ -3,6 +3,7 @@ source_model: 'raw_orders'
 derived_columns:
   ORDERS_KEY: 'O_ORDERKEY'
   CUSTOMER_KEY: 'O_CUSTKEY'
+  EFFECTIVE_FROM: 'O_ORDERDATE'
   RECORD_SOURCE: '!SNOW-ORDERS'
 hashed_columns:
   ORDERS_PK: 'ORDERS_KEY'
@@ -20,6 +21,23 @@ hashed_columns:
       - 'O_ORDERSTATUS'
       - 'O_TOTALPRICE'
       - 'O_ORDERDATE'
+      - 'O_ORDERPRIORITY'
+      - 'O_CLERK'
+      - 'O_SHIPPRIORITY'
+
+  CUSTOMER_ORDERS_HASHDIFF:
+    is_hashdiff: true
+    columns:
+      - 'CUSTOMER_KEY'
+      - 'ORDERS_KEY'
+      - 'C_NAME'
+      - 'C_ADDRESS'
+      - 'C_PHONE'
+      - 'C_ACCTBAL'
+      - 'C_MKTSEGMENT'
+      - 'R_NAME'
+      - 'N_NAME'
+
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}
