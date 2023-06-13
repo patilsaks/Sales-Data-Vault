@@ -8,6 +8,7 @@ This project aims to develop a data vault for online retail database with 2 hubs
 <img width="1153" alt="Screenshot 2023-06-12 at 11 54 46 PM" src="https://github.com/patilsaks/Sales-Data-Vault/assets/116474692/f8831b8c-c02b-4c95-b643-7350db8a01a1">
 
 <br>
+<br>
 
 ### Data Vault Staging Table: v_stg_customer 
 ```
@@ -86,6 +87,8 @@ FROM staging
 {{ dbtvault.link(src_pk=src_pk, src_fk=src_fk, src_ldts=src_ldts, src_source=src_source, source_model=source_model) }}
 ```
 <br>
+<br>
+
 ### hub_customer
 ```
 {%- set source_model = "v_stg_customer" -%}
@@ -97,6 +100,8 @@ FROM staging
 {{ dbtvault.hub(src_pk=src_pk, src_nk=src_nk, src_ldts=src_ldts, src_source=src_source, source_model=source_model) }}
 ```
 <br>
+<br>
+
 ### sat_customer
 ```
 {%- set source_model = "v_stg_customer" -%}
@@ -111,6 +116,8 @@ FROM staging
  src_eff=src_eff, src_ldts=src_ldts, src_source=src_source, source_model=source_model) }}
  ```
 <br>
+<br>
+
 ### hub_orders
 ```
 {%- set source_model = "v_stg_customer" -%}
@@ -122,6 +129,8 @@ FROM staging
 {{ dbtvault.hub(src_pk=src_pk, src_nk=src_nk, src_ldts=src_ldts, src_source=src_source, source_model=source_model) }}
 ```
 <br>
+<br>
+
 ### sat_orders
 ```
 {%- set source_model = "v_stg_customer" -%}
