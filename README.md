@@ -2,7 +2,6 @@
 This project aims to develop a data vault for online retail database with 2 hubs, 2 satellites and one link using snowflake and dbtvault.
 
 <br>
-<br>
 
 ### Data Vault Diagram
 <img width="578" alt="Screenshot 2023-06-13 at 1 34 42 AM" src="https://github.com/patilsaks/Sales-Data-Vault/assets/116474692/64d5e88b-c16a-492f-9394-bcd00150a773">
@@ -94,7 +93,6 @@ FROM staging
 {{ dbtvault.link(src_pk=src_pk, src_fk=src_fk, src_ldts=src_ldts, src_source=src_source, source_model=source_model) }}
 ```
 <br>
-<br>
 
 ### hub_customer
 ```
@@ -106,7 +104,6 @@ FROM staging
 
 {{ dbtvault.hub(src_pk=src_pk, src_nk=src_nk, src_ldts=src_ldts, src_source=src_source, source_model=source_model) }}
 ```
-<br>
 <br>
 
 ### sat_customer
@@ -123,7 +120,6 @@ FROM staging
  src_eff=src_eff, src_ldts=src_ldts, src_source=src_source, source_model=source_model) }}
  ```
 <br>
-<br>
 
 ### hub_orders
 ```
@@ -135,7 +131,6 @@ FROM staging
 
 {{ dbtvault.hub(src_pk=src_pk, src_nk=src_nk, src_ldts=src_ldts, src_source=src_source, source_model=source_model) }}
 ```
-<br>
 <br>
 
 ### sat_orders
