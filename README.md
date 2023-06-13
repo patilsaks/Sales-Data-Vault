@@ -3,6 +3,7 @@ This project aims to develop a data vault for online retail database with 2 hubs
 
 <br>
 <br>
+
 ### Data Vault Diagram
 <img width="578" alt="Screenshot 2023-06-13 at 1 34 42 AM" src="https://github.com/patilsaks/Sales-Data-Vault/assets/116474692/64d5e88b-c16a-492f-9394-bcd00150a773">
 
