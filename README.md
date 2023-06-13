@@ -9,8 +9,7 @@ This project aims to develop a data vault for online retail database with 2 hubs
 
 
 
-
-Data Vault Staging Table: v_stg_customer 
+### Data Vault Staging Table: v_stg_customer 
 ```
 {%- set yaml_metadata -%}
 source_model: 'raw_orders'
